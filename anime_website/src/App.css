@@ -9,6 +9,9 @@
 .App {
   text-align: center;
   padding: 10px 0;
+  background: url('./img/fondo.jpg') no-repeat;
+  background-size: cover;
+  height: 700px;
 }
 
 #logo{
@@ -19,7 +22,7 @@
 .head-page{
   border: 1px;
   width: 80%;
-  background: red;
+  background: #484ace;
   margin: auto;
   text-align: left;
 }
@@ -33,4 +36,43 @@
 h1{
   text-align: center;
   font-size: 5em;
+}
+
+.Nav-Menu{
+  background: red;
+  width: 80%;
+  margin: auto;
+}
+
+.button-menu{
+    background: #484ace;
+    width: 25%;
+    color: white;
+}
+
+.content{
+  width: 80%;
+  margin: auto;
+  height: 500px;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+}
+
+/*Contenido del documento Home.js*/
+
+#About-us{
+  text-align: left;
+  padding: 1em;
+}
+
+h2{
+  text-align: center;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-justify{
+  text-align: justify;
 }
