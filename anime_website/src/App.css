@@ -39,7 +39,6 @@ h1{
 }
 
 .Nav-Menu{
-  background: red;
   width: 80%;
   margin: auto;
 }
@@ -48,6 +47,8 @@ h1{
     background: #484ace;
     width: 25%;
     color: white;
+    height: 50px;
+    border: 1px solid;
 }
 
 .content{
@@ -75,4 +76,18 @@ h2{
 
 .text-justify{
   text-align: justify;
+}
+
+/*Contenido del documento Millonaire.js*/
+
+.millonaire{
+  width: 80%;
+  background: url('./img/fondo_juego2.jpg') no-repeat;
+  height: 100%;
+  background-size: cover;
+  margin: auto;
+}
+
+.button-answer{
+    background: black;
 }

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import logo from './img/logo.jpg';
-import Home from './Components/Home.js'
+import Home from './Components/Home.js';
+import Millonaire from './Components/Millonaire.js';
 
 class App extends Component {
 
@@ -26,7 +27,7 @@ class App extends Component {
     }else if (this.state.bingo) {
       return(<p>Hola Bingo</p>);
     }else if (this.state.millionaire) {
-      return (<p>Hola millonario</p>);
+      return (<Millonaire/>);
     }else if (this.state.animes) {
       return(<p>Hola animes</p>);
     }
