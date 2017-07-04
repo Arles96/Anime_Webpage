@@ -89,5 +89,20 @@ h2{
 }
 
 .button-answer{
-    background: black;
+    background: #a6a7da;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 40%;
+    height: 25px;
+}
+
+.contentGame{
+  position: absolute;
+  top: 270px;
+  left: 630px;
+  width: 30%;
+}
+
+#question2{
+  color: black;
 }
