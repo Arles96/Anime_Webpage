@@ -26,7 +26,7 @@ export default class Millonaire extends Component{
         ["a) Vados", "b) DaiShinkan", "c) Bills", "d) Zeno"],
         ["a) Hit", "b) Cabba", "c) Frost", "d) Botamo"],
         ["a) Hashirama", "b) Tobirama", "c) Minato", "d) Hiruzen"],
-        ["a) Obtener a kurama y Hachibi", "b) Por invasiones", "c) Por poder", "d) Ninguna de las anteriores"],
+        ["a) Por kurama y Hachibi", "b) Por invasiones", "c) Por poder", "d) Ninguna"],
         ["a) kurama", "b) Hachibi", "c) Son Goku", "d) Matatabi"],
         ["a) Super Saiyajin", "b) Super Saiyajin 3", "c) Super Saiyajin Dios", "d) Super Saiyajin Dios Azul"]
       ],
@@ -42,20 +42,19 @@ export default class Millonaire extends Component{
   }
 
   handleContentGame(){
-    if (this.state.verification) {
+    if (this.state.verification && this.state.account<10) {
       return (
         <div className="contentGame">
           <article className="question">
             <p id="question2">{this.state.question[this.state.account]}</p>
           </article>
           <article className="answer">
-            <div>
+            <div id="up-button">
               <button id="button1" className="button-answer" onClick={this.handleButton1}>
                 {this.state.answer[this.state.account][0]}
               </button>
               <button id="button2" className="button-answer" onClick={this.handleButton2}>
                 {this.state.answer[this.state.account][1]}
-
               </button>
             </div>
             <div>
@@ -67,6 +66,14 @@ export default class Millonaire extends Component{
               </button>
             </div>
           </article>
+        </div>
+      );
+    }
+    else if (this.state.verification && this.state.account===10) {
+      return (
+        <div className="contentGame">
+          <h2>Has Ganando el juego</h2>
+          <button onClick={this.handleButtonReset}>Reiniciar el Juego</button>
         </div>
       );
     }
@@ -82,7 +89,7 @@ export default class Millonaire extends Component{
   }
 
   handleButton1(){
-      if (this.state.account==0 || this.state.account==5 || this.state.account==7) {
+      if (this.state.account===0 || this.state.account===5 || this.state.account===7) {
       let account2 = this.state.account + 1;
       this.setState({
         verification: true,
@@ -96,7 +103,7 @@ export default class Millonaire extends Component{
   }
 
   handleButton2(){
-    if (this.state.account==1 || this.state.account==4 || this.state.account==8) {
+    if (this.state.account===1 || this.state.account===4 || this.state.account===8) {
       let account2 = this.state.account + 1;
       this.setState({
         verification: true,
@@ -110,7 +117,7 @@ export default class Millonaire extends Component{
   }
 
   handleButton3(){
-    if (this.state.account==3) {
+    if (this.state.account===3) {
       let account2 = this.state.account + 1;
       this.setState({
         verification: true,
@@ -124,7 +131,7 @@ export default class Millonaire extends Component{
   }
 
   handleButton4(){
-    if (this.state.account==2 || this.state.account==6 || this.state.account==9) {
+    if (this.state.account===2 || this.state.account===6 || this.state.account===9) {
       let account2 = this.state.account + 1;
       this.setState({
         verification: true,
